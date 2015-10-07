@@ -23,7 +23,7 @@ before_script:
 script:
 - echo "Script stage"
 - npm test
-- mocha .\test\main.test.js
+- mocha ./test/main.test.js
 after_success:
 - echo "After success stage"
 after_failure:
