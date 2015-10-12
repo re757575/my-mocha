@@ -25,8 +25,9 @@ describe('Array', function() {
 
     describe('#indexOf()', function() {
 
-        it('assert return -1 when the value is not present', function(done) {
+        it.skip('assert return -1 when the value is not present', function(done) {
           console.log('invoke one assert');
+          assert.typeOf([1,2,3].indexOf(5), 'number', 'Array indexOf return value is number');
           assert.equal(-1, [1,2,3].indexOf(5));
           assert.equal(-1, [1,2,3].indexOf(0));
           done();
@@ -45,7 +46,7 @@ describe('Array', function() {
 
     describe('#indexOf()', function() {
 
-        it('expect return -1 when the value is not present', function(done) {
+        it.only('expect return -1 when the value is not present', function(done) {
           console.log('invoke third expect');
           expect([1,2,3].indexOf(5)).to.equal(-1);
           expect([1,2,3].indexOf(0)).to.equal(-1);
